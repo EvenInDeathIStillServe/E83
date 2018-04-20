@@ -17,14 +17,6 @@ CCCP Strelok
 
 # ADMINISTRATION
 
-JohnTheBastard = {
-::ALL::
-}
-
-Miomio = {
-::ALL::
-}
-
 AncientV25 = {
 ::ALL::
 }
@@ -33,11 +25,15 @@ P3N3B10L3NT0 = {
 ::ALL::
 }
 
-Lokiki = {
+Frown = {
 ::ALL::
 }
 
-Frown = {
+Memeopolis = {
+::ALL::
+}
+
+EvenInDeathIStillServe = {
 ::ALL::
 }
 
