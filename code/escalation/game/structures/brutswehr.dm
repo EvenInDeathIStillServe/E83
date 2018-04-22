@@ -21,6 +21,13 @@
 /obj/structure/brutswehr/set_dir(direction)
 	dir = direction
 
+/obj/structure/brutswehr/attackby(var/obj/item/I, mob/user)
+	if(istype(I,/obj/item/weapon/saperka))
+		to_chat(user, "<span class='notice'>Digging [name]...</span>")
+		if(do_after(user, 15, src) && in_range(user, src))
+			new /obj/item/weapon/ore/glass(user.loc)
+			src.Destroy()
+
 /obj/structure/brutswehr/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(istype(mover, /obj/item/projectile))
 		var/obj/item/projectile/proj = mover
@@ -32,6 +39,12 @@
 			return 1
 
 		return check_cover(mover, target)
+
+	if(istype(mover, /obj/item/weapon/grenade))
+		if(get_dir(loc, target) == dir)
+			return !density
+		else
+			return 1
 
 	return !density
 
