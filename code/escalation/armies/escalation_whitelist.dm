@@ -74,6 +74,7 @@
 		return 1
 
 /proc/check_player_in_whitelist(var/key, var/rank)
+	return 1
 	var/ckey = ckey(key)
 	if(!ckey)
 		return 0
